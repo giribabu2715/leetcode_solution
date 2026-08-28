@@ -9,7 +9,7 @@ class Solution:
             if nums[l]==nums[mid]:
                 l+=1
                 continue
-            elif nums[l]<=nums[mid]:
+            if nums[l]<=nums[mid]:
                 if target>=nums[l] and target<=nums[mid]:
                     h=mid-1
                 else:
