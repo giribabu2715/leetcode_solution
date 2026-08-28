@@ -6,9 +6,9 @@ class Solution:
             mid=(l+h)//2
             if target==nums[mid]:
                 return True
-            if nums[l]==nums[mid]==nums[h]:
+            if nums[l]==nums[mid]:
                 l+=1
-                h-=1
+                continue
             elif nums[l]<=nums[mid]:
                 if target>=nums[l] and target<=nums[mid]:
                     h=mid-1
