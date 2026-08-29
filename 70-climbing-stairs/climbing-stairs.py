@@ -1,0 +1,15 @@
+class Solution:
+    def climbStairs(self, n):
+        if n == 1:
+            return 1
+
+        a = 1  # ways to reach step 1
+        b = 2  # ways to reach step 2
+
+        for i in range(3, n + 1):
+            c = a + b
+            a = b
+            b = c
+
+        return b
+        
