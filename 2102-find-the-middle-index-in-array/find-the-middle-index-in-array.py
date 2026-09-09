@@ -2,8 +2,8 @@ class Solution:
     def findMiddleIndex(self, nums: List[int]) -> int:
         total=sum(nums)
         left=0
-        for i,x in enumerate(nums):
-            if left==(total-left-x):
+        for i in range(len(nums)):
+            if left==(total-left-nums[i]):
                 return i
-            left+=x
+            left+=nums[i]
         return -1
